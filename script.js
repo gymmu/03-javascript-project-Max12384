@@ -28,3 +28,27 @@ export function aufgabe02 (args) {
   }
   return result.join("")
 }
+
+export function aufgabe10 (args) {
+  const input = args
+  
+  if(input.length !== 7 ) return false
+  if (input[0] !== "#") return false
+
+  for (let i =1; i < input.length; i++) {
+    const currentElement = input [i]
+    const ascii = currentElement.charCodeAt (0)
+
+    if (48 <= ascii && ascii <= 57) {
+      //Ist eine Ziffer
+    }
+    else if (65 <= ascii && ascii <= 70) {
+      //ist A-F
+    } else {
+      return false
+    }
+    }
+    return true
+  }
+  
+  
