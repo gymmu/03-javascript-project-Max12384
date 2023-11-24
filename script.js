@@ -71,14 +71,25 @@ export function aufgabe05 (args) {
   return false
 }
 
+
 export function aufgabe06 (args) {
   const input = args
-  const result = []
-  
-  return result.join("")
+
+  for (let i =0; i < input.length; i++) {
+    const ascii = input[i].charCodeAt (0)
+
+    if (65 <= ascii && ascii <= 90) {
+      return true
+    } else if (97 <= ascii && ascii <= 122){
+    return true
+    } else if (48 <= ascii && ascii <= 57){
+      return true
+    } else if ( 0 !== ascii){
+    return true
+    }
+  }
+  return false
 }
-
-
 
 
 export function aufgabe10 (args) {
