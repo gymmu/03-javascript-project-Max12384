@@ -8,3 +8,10 @@ export function aufgabe01(args) {
   }
   return result.join("")
 }
+
+export function aufgabe (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
