@@ -23,11 +23,63 @@ export function aufgabe02 (args) {
   for (let i = 0; i < input.length; i++) {
     let currentElement = input[i]
     currentElement = currentElement.toUpperCase()
-    result.push(currentElement
-    )
+    result.push(currentElement)
   }
   return result.join("")
 }
+
+export function aufgabe03 (args) {
+  const input = args
+  const result = []
+  let count = 0
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      count++
+    } else if (currentElement === "E") {
+      count++
+  }
+}
+  return count
+}
+
+export function aufgabe04 (args) {
+  const input = args
+  const result = []
+  let count = 1
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      count++
+  }
+}
+  return count
+}
+
+export function aufgabe05 (args) {
+  const input = args
+
+  for (let i =0; i < input.length; i++) {
+    const ascii = input[i].charCodeAt (0)
+
+    if (65 <= ascii && ascii <= 90) {
+      return true
+    } 
+  }
+  return false
+}
+
+export function aufgabe06 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+
 
 export function aufgabe10 (args) {
   const input = args
