@@ -78,17 +78,30 @@ export function aufgabe06 (args) {
   for (let i =0; i < input.length; i++) {
     const ascii = input[i].charCodeAt (0)
 
-    if (65 <= ascii && ascii <= 90) {
-      return true
-    } else if (97 <= ascii && ascii <= 122){
+   if (0 <= ascii && ascii <= 31){
     return true
-    } else if (48 <= ascii && ascii <= 57){
+    } else if (33 <= ascii && ascii <= 64){
       return true
-    } else if ( 0 !== ascii){
+    } else if (123 <= ascii){
     return true
-    }
+    } else if (91 <= ascii && ascii <= 96)
+    return true
+
   }
   return false
+}
+
+
+export function aufgabe07(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "und"){
+    result.push("")}
+  }
+  return result.join("")
 }
 
 
