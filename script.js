@@ -98,8 +98,29 @@ export function aufgabe07(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === "und"){
-    result.push("")}
+    const currentElement1 = input[i+1]
+    const currentElement2 = input[i+2]
+    if (currentElement === "u" && currentElement1 === "n" && currentElement2 === "d"){
+     return true 
+    } else if (currentElement === "U" && currentElement1 === "n" && currentElement2 === "d") {
+      return true
+    }
+}
+  return false
+}
+
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e"){
+    result.push("3")}
+    else {
+      result.push(currentElement)
+    }
   }
   return result.join("")
 }
