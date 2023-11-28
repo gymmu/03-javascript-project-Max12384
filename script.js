@@ -126,6 +126,15 @@ export function aufgabe08(args) {
 }
 
 
+export function aufgabe09 (args) {
+  const input = args
+  const result = []
+  if (input.length === 6){
+    return true
+  }
+  return false
+}
+
 export function aufgabe10 (args) {
   const input = args
   
