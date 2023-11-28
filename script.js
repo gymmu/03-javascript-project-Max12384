@@ -53,6 +53,7 @@ export function aufgabe04 (args) {
     const currentElement = input[i]
     if (currentElement === " ") {
       count++
+    
   }
 }
   return count
@@ -156,5 +157,17 @@ export function aufgabe10 (args) {
     }
     return true
   }
+
+
+export function aufgabe11 (args) {
+  const input = args
+
+  for (let i =0; i < input.length; i++) {
+    const ascii = input[i].charCodeAt (0)
+  }
+  
+  return ascii
+}
+
   
   
