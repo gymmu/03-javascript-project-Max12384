@@ -162,12 +162,31 @@ export function aufgabe10 (args) {
 export function aufgabe11 (args) {
   const input = args
 
-  for (let i =0; i < input.length; i++) {
-    const ascii = input[i].charCodeAt (0)
-  }
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
   
-  return ascii
+  if (input.length === 1){
+     return ascii
+  }
+}
 }
 
+export function aufgabe12 (args) {
+  const input = args
+  const result = []
   
   
+  for (let i = 0; i < input.length; i++) {
+   
+    const currentElement = input[i]
+    
+    if (currentElement === "e"){
+      return i
+    }
+   
+    
+  }
+  return -1
+}
+
