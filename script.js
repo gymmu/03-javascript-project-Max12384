@@ -353,7 +353,7 @@ export function aufgabe23 (args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const currentElement1 = input[(i/i)-1]
+    const currentElement1 = input[0]
     
     if (count === 0) {
       count++
@@ -371,3 +371,24 @@ export function aufgabe23 (args) {
   return result.join("")
 }
 
+export function aufgabe24 (args) {
+  const input = args
+  const result = []
+  
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const currentElement1 = input[0]
+    const currentElement2 = input[input.length-1]
+
+    if (i === 0) {
+      result.push(currentElement2)
+    } else if (i === input.length-1)
+      result.push(currentElement1)
+    else {
+      result.push(currentElement)
+    }
+   }
+  
+  return result.join("")
+}
