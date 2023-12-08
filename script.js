@@ -224,4 +224,20 @@ export function aufgabe14 (args) {
   return -1
 }
 
+export function aufgabe15(args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+    if (currentElement === " ") {
+      return result.join
+    } else {
+      result.push(currentElement)
+    }
+  }
+}
 
