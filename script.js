@@ -274,7 +274,7 @@ export function aufgabe17 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
   if (currentElement === "$" && count === 1 && i !== input.length) {
-  result.push("$")
+  result.push("")
   result.push(",")
   count++
   }
@@ -345,3 +345,29 @@ export function aufgabe22 (args) {
   }
   return result.join("")
 }
+
+export function aufgabe23 (args) {
+  const input = args
+  const result = []
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const currentElement1 = input[(i/i)-1]
+    
+    if (count === 0) {
+      count++
+      result.push(currentElement)
+      result.push(currentElement)
+    } else if (i+2 > input.length) { 
+      result.push(currentElement)
+      result.push(currentElement1)
+    }
+    else {
+      result.push(currentElement)
+    }
+
+  }
+  return result.join("")
+}
+
