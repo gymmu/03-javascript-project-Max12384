@@ -207,7 +207,7 @@ export function aufgabe13 (args) {
 export function aufgabe14 (args) {
   const input = args
   const result = []
-  const number = 0
+  let number = 0
   
   
   for (let i = 0; i < input.length; i++) {
@@ -224,6 +224,8 @@ export function aufgabe14 (args) {
   return -1
 }
 
+
+
 export function aufgabe15(args) {
   const input = args
   const result = []
@@ -231,11 +233,115 @@ export function aufgabe15(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
-    if (currentElement === " ") {
-      return result.join
+    if (currentElement === " " && i !== input.length){
+      return result.join("")
     } else {
       result.push(currentElement)
     }
   }
+  return result.join("")
 }
 
+export function aufgabe16 (args) {
+  const input = args
+  const result = []
+  let count = 0
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  if (count === 0 && currentElement === "$" && i+2 > input.length) {
+  result.push("")
+  count++
+  }
+  else if (currentElement === "$" && count === 0) {
+  result.push(",")
+  count++
+  }
+  else {
+    result.push(currentElement)
+  }
+ 
+}
+return result.join("")
+}
+
+
+export function aufgabe17 (args) {
+  const input = args
+  const result = []
+  let count = 0
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  if (currentElement === "$" && count === 1 && i !== input.length) {
+  result.push("$")
+  result.push(",")
+  count++
+  }
+  else {
+    result.push(currentElement)
+  }
+ 
+}
+return result.join("")
+}
+
+export function aufgabe19 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const currentElement1 = input[i+1]
+    if (currentElement === "." && currentElement1 !== " "){
+    return false
+  }
+}
+  return true
+}
+
+export function aufgabe21 (args) {
+  const input = args
+  const result = []
+
+  for (let i = input.length; i > -1; i--) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  
+  return result.join("")
+}
+
+export function aufgabe22 (args) {
+  const input = args
+  const result = []
+  let count = 0
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (count === 1) {
+      result.push(currentElement)
+    }
+    else if (currentElement === "k") {
+      count++
+      result.push(currentElement)
+    }
+    else {
+      result.push("_")
+    }
+
+  }
+  return result.join("")
+}
