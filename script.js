@@ -184,9 +184,25 @@ export function aufgabe12 (args) {
     if (currentElement === "e"){
       return i
     }
-   
-    
   }
   return -1
 }
+
+export function aufgabe13 (args) {
+  const input = args
+  const result = []
+  
+  
+  for (let i = input.length; i > 1; i--) {
+   
+    const currentElement = input[i]
+    
+    if (currentElement === "e"){
+      return i
+    }
+  }
+  return -1
+}
+
+
 
