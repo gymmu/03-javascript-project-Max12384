@@ -204,5 +204,24 @@ export function aufgabe13 (args) {
   return -1
 }
 
+export function aufgabe14 (args) {
+  const input = args
+  const result = []
+  const number = 0
+  
+  
+  for (let i = 0; i < input.length; i++) {
+   
+    const currentElement = input[i]
+    
+    if (currentElement === "e"){
+      number++
+    if (number === 3){
+      return i
+    }
+  }
+  }
+  return -1
+}
 
 
