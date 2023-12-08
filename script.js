@@ -392,3 +392,27 @@ export function aufgabe24 (args) {
   
   return result.join("")
 }
+
+export function aufgabe25 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const average = input.length / 2
+    const average1 = (input.length / 2) + .5
+    const average2 = (input.length / 2) - .5
+    
+    if (i = average) {
+      result.push("")
+    } else if (i = average1) {
+      result.push("")
+    } else if (i = average2) {
+      result.push("")
+    }
+     else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
