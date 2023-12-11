@@ -542,3 +542,56 @@ export function aufgabe27 (args) {
     return false
   }
 }
+
+export function aufgabe28 (args) {
+  const input = args
+  const result = []
+  const result1 = []
+  let count = 0
+  let count2 = 0
+  let count3 = 0
+  
+  for (let i =0; i < input.length; i++) {
+    const currentElement = input [i]
+    const ascii = currentElement.charCodeAt (0)
+
+    if (48 <= ascii && ascii <= 57) {
+      //Checks if the current character a number
+      count++
+      //If it is a number, the count increases by 1. This is done in case of no input.
+    }else if (currentElement === " " && count2 === 0) {
+      count2++
+      //If the currentElement is a space, count2 will be increased by 1
+      //If there are two spaces this code will not run
+      }
+    else {
+      return "error"
+      //If there is a non-number in the input, the code is stopped and false is returned.
+    }
+  }
+  if (count === 0) {
+    return "error"
+  }
+
+
+
+  //the code before this will make sure the input is formatted correctly
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input [i]
+    
+
+    if (currentElement === " "){
+    count3++ 
+    } else if (count3 === 1) {
+      result1.push(currentElement)
+    } else {
+    result.push(currentElement)
+    }
+  }
+
+  let add1 = result.join("")
+  let add2 = result1.join("")
+  let final = add3 + add4
+  return final
+  //almost finished, but I do not know how to add the two results.
+}
