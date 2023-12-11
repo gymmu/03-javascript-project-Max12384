@@ -310,10 +310,9 @@ export function aufgabe17 (args) {
   
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-  if (currentElement === "$" && count === 1 && i !== input.length) {
-  result.push("")
+  if (currentElement === " " && i !== input.length) {
   result.push(",")
-  count++
+  result.push(" ")
   }
   else {
     result.push(currentElement)
@@ -321,6 +320,45 @@ export function aufgabe17 (args) {
  
 }
 return result.join("")
+}
+
+export function aufgabe18 (args) {
+  const input = args
+  const result = []
+  const result1 = []
+  let count1 = 0
+  let count2 = 0
+  
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt (0)
+
+    if (currentElement === " ") {
+      
+    }
+    else if (48 <= ascii && ascii <= 57) {
+      result.push(currentElement)
+      count1++
+      //If the current element is a number it will push it to result
+    } else {
+      result1.push(currentElement)
+      count2++
+      //If the current element is anything else it will push it to result1
+    }
+    
+  }
+  if (count1 > 0){
+    result.push(" ")
+  }
+  if (count2 > 0){
+    result1.push(" ")
+  }
+  //These two if statements will add a space if there is a name or age.
+  let age = result.join("")
+  let name = result1.join("")
+  return "Sie heissen " + name + "und sind " + age + "Jahre alt"
+
 }
 
 export function aufgabe19 (args) {
@@ -559,10 +597,13 @@ export function aufgabe28 (args) {
       //Checks if the current character a number
       count++
       //If it is a number, the count increases by 1. This is done in case of no input.
-    }else if (currentElement === " " && count2 === 0) {
+    }else if (currentElement === " ") {
       count2++
       //If the currentElement is a space, count2 will be increased by 1
       //If there are two spaces this code will not run
+      if (count2 == 2) 
+        return "error"
+      //This will return an error if there is more than one space
       }
     else {
       return "error"
@@ -582,6 +623,7 @@ export function aufgabe28 (args) {
 
     if (currentElement === " "){
     count3++ 
+    //once a space is read, count3 will increase by 1
     } else if (count3 === 1) {
       result1.push(currentElement)
     } else {
@@ -591,7 +633,7 @@ export function aufgabe28 (args) {
 
   let add1 = result.join("")
   let add2 = result1.join("")
-  let final = add3 + add4
+  let final = add1 + add2
   return final
   //almost finished, but I do not know how to add the two results.
 }
