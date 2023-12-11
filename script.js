@@ -396,18 +396,21 @@ export function aufgabe24 (args) {
 export function aufgabe25 (args) {
   const input = args
   const result = []
+  let count = 0
   
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const average = input.length / 2
-    const average1 = (input.length / 2) + .5
-    const average2 = (input.length / 2) - .5
+    const averageOdd = (input.length / 2) + .5
+    const averageEven1 = (input.length / 2) 
+    const averageEven2 = (input.length / 2) + 1
     
-    if (i == average) {
+    if (i+1 == averageOdd && count === 0) {
       result.push("")
-    } else if (i == average1) {
+      count++
+    } else if (i+1 == averageEven1) {
       result.push("")
-    } else if (i == average2) {
+      count++
+    } else if (i+1 == averageEven2) {
       result.push("")
     }
      else {
@@ -448,4 +451,11 @@ export function aufgabe26 (args) {
   }
   
   return result.join("")
+}
+
+export function aufgabe27 (args) {
+  const input = args
+  const result = []
+  
+  return input.length
 }
