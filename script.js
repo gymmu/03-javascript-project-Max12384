@@ -4,13 +4,17 @@ export function aufgabe01(args) {
   const result = []
 
   for (let i = 0; i < input.length; i++) {
+    // as long as i is less than the length of the input, the loop with repeat. For every loop i increases by 1.
     const currentElement = input[i]
     if (currentElement === "e"){
     result.push("")}
+    // replaces all e's with " "
     else if(currentElement === "E"){
     result.push("")}
+    // replaces all E's with " " 
     else {
       result.push(currentElement)
+    // keeps all other characters
     }
   }
   return result.join("")
@@ -23,6 +27,7 @@ export function aufgabe02 (args) {
   for (let i = 0; i < input.length; i++) {
     let currentElement = input[i]
     currentElement = currentElement.toUpperCase()
+    //capitalizes all current element.
     result.push(currentElement)
   }
   return result.join("")
@@ -37,7 +42,9 @@ export function aufgabe03 (args) {
     const currentElement = input[i]
     if (currentElement === "e") {
       count++
+      //if e is found, "count" increases by 1
     } else if (currentElement === "E") {
+      //if E is found, "count" increases by 1
       count++
   }
 }
@@ -53,7 +60,7 @@ export function aufgabe04 (args) {
     const currentElement = input[i]
     if (currentElement === " ") {
       count++
-    
+    //If a space is found, "count" increases by 1
   }
 }
   return count
@@ -64,9 +71,10 @@ export function aufgabe05 (args) {
 
   for (let i =0; i < input.length; i++) {
     const ascii = input[i].charCodeAt (0)
-
+    //"ascii" is equal to the ASCII value of the current charector
     if (65 <= ascii && ascii <= 90) {
       return true
+      //If a capital letter is found, the code returns true"
     } 
   }
   return false
@@ -87,6 +95,7 @@ export function aufgabe06 (args) {
     return true
     } else if (91 <= ascii && ascii <= 96)
     return true
+    //This code includes all ASCII values except capital and lowercase letters. If the code finds an ascii value inside of these ranges, the code will stop and "true" will be returned
 
   }
   return false
@@ -101,11 +110,14 @@ export function aufgabe07(args) {
     const currentElement = input[i]
     const currentElement1 = input[i+1]
     const currentElement2 = input[i+2]
+    //CurrentElement 1 and 2 are reading values one after and two after the current i value.
+  
     if (currentElement === "u" && currentElement1 === "n" && currentElement2 === "d"){
      return true 
     } else if (currentElement === "U" && currentElement1 === "n" && currentElement2 === "d") {
       return true
     }
+    //this checks if u, n, d are found sequentially. If found the code will stop and return "true"
 }
   return false
 }
