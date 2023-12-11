@@ -194,7 +194,7 @@ export function aufgabe13 (args) {
   
   
   for (let i = input.length; i > 1; i--) {
-   
+
     const currentElement = input[i]
     
     if (currentElement === "e"){
@@ -403,16 +403,49 @@ export function aufgabe25 (args) {
     const average1 = (input.length / 2) + .5
     const average2 = (input.length / 2) - .5
     
-    if (i = average) {
+    if (i == average) {
       result.push("")
-    } else if (i = average1) {
+    } else if (i == average1) {
       result.push("")
-    } else if (i = average2) {
+    } else if (i == average2) {
       result.push("")
     }
      else {
       result.push(currentElement)
     }
   }
+  return result.join("")
+}
+
+export function aufgabe26 (args) {
+  const input = args
+  const result = []
+  let number = 0
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const currentElement1 = input[1]
+    const ascii = currentElement.charCodeAt (0)
+    const ascii1 = currentElement1.charCodeAt (0)
+    
+    if (number == 0 && ascii1 < ascii) {
+      result.push(currentElement1)
+      result.push(currentElement)
+      number++
+    }
+      else if (number == 0 && ascii1 > ascii) {
+      result.push(currentElement)
+      result.push(currentElement1)
+      number++
+      }
+      else if(number == 1) {
+        number++
+      }
+      else {
+        result.push(currentElement)
+      }
+
+  }
+  
   return result.join("")
 }
