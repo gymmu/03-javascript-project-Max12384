@@ -7,7 +7,7 @@ export function aufgabe01(args) {
   const result = []
 
   for (let i = 0; i < input.length; i++) {
-    // as long as i is less than the length of the input the loop will repeat. 
+    // As long as i is less than the length of the input the loop will repeat. 
     // For every loop, i increases by 1. 
     const currentElement = input[i]
     // This takes the input at position i, and stores it. 
@@ -172,7 +172,7 @@ export function aufgabe10 (args) {
     const ascii = currentElement.charCodeAt (0)
 
     if (48 <= ascii && ascii <= 57) {
-      //Checks if the current character i
+      //Checks if the current character a number
     }
     else if (65 <= ascii && ascii <= 70) {
       //Checks if the current character is A-F
@@ -285,8 +285,8 @@ export function aufgabe16 (args) {
   result.push("")
   count++
   //If a "$" is found at the end of the input, this code will delete it.
-  //If you add 2 to i, it will only be greater than the input length on the last value of the input.
-  //Therefor, i+2 > input.length, will only be true when i reads the last value of the input.
+  //If you add 2 to i, it will always be greater than the input length on the last value of the input.
+  //Therefor, i+2 > input.length, will only be true when it reads the last value of the input.
   }
   else if (currentElement === "$" && count === 0) {
   result.push(",")
@@ -508,7 +508,7 @@ export function aufgabe26 (args) {
       }
       else if(number == 1) {
         number++
-      //this code will repeat the loop without returning anything.
+      //This will repeat the loop without pushing anything.
       }
       else {
         result.push(currentElement)
