@@ -521,7 +521,24 @@ export function aufgabe26 (args) {
 
 export function aufgabe27 (args) {
   const input = args
-  const result = []
+  let count = 0
   
-  return input.length
+  for (let i =0; i < input.length; i++) {
+    const currentElement = input [i]
+    const ascii = currentElement.charCodeAt (0)
+
+    if (48 <= ascii && ascii <= 57) {
+      //Checks if the current character a number
+      count++
+      //If it is a number, the count increases by 1. This is done in case of no input.
+    } else {
+      return false
+      //If there is a non-number in the input, the code is stopped and false is returned.
+    }
+  }
+  if (count > 0) {
+    return true
+  } else {
+    return false
+  }
 }
