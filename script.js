@@ -332,10 +332,12 @@ export function aufgabe17 (args) {
       else {
         listThird.push(currentElement)
       }
+      //once a "." is found, the rest of the values will be put into a different list until a "." is found again
     }
   }
   const result = listFirst.join("") + listSecond.join("") + listThird.join("")
   return result
+
 }
 
 export function aufgabe18 (args) {
