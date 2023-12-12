@@ -68,8 +68,10 @@ export function aufgabe04 (args) {
     const currentElement = input[i]
     if (currentElement === " ") {
       count++
-    //If a space is found, "count" increases by 1.
-    //This assumes every word is seperated by a space.
+          //If a space is found, "count" increases by 1.
+    } else if (currentElement == "-") {
+      count--
+    //If a "-" is found, the count decreases by 1.
   }
 }
   return count
