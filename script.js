@@ -312,9 +312,12 @@ export function aufgabe17 (args) {
   
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-  if (currentElement === " " && i !== input.length) {
+    if (count === 3) {
+
+  } else if (currentElement === "," && i !== input.length) {
   result.push(",")
   result.push(" ")
+  count++
   }
   else {
     result.push(currentElement)
@@ -378,7 +381,6 @@ export function aufgabe19 (args) {
 
 export function aufgabe20 (args) {
   const input = args
-  const result = []
   
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -460,6 +462,7 @@ export function aufgabe23 (args) {
 //It says "aa" should be equal to "aaa"
 //However, if you double the first input and then add it to the end, "aa" should turn into "aaaa"
 
+
 export function aufgabe24 (args) {
   const input = args
   const result = []
@@ -522,42 +525,24 @@ export function aufgabe25 (args) {
 
 export function aufgabe26 (args) {
   const input = args
-  const result = []
-  let number = 0
-  
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    const currentElement1 = input[1]
-    const ascii = currentElement.charCodeAt (0)
-    //this will get the ascii code of the first value
-    const ascii1 = currentElement1.charCodeAt (0)
-    //this will get the ascii code of the second value
+  const list = input.split("")
 
-    
-    if (number == 0 && ascii1 < ascii) {
-      result.push(currentElement1)
-      result.push(currentElement)
-      number++
-      //if the second Ascii value is less than the first, the second value will be returned first.
+  for (let i = 0; i < list.length - 1; i++) {
+    //this loop will run until i is equal to the length of the input.
+    const currentElement = list[i]
+    const currentElement1 = list[i + 1]
+    if (currentElement.charCodeAt(0) > currentElement1.charCodeAt(0)) {
+      const tmp = list[i + 1]
+      list[i+1] = list[i]
+      list[i] = tmp
+      i = -1
+    //The loop will restart after this.
     }
-      else if (number == 0 && ascii1 > ascii) {
-      result.push(currentElement)
-      result.push(currentElement1)
-      number++
-      //if the second ascii value is greater than the first, the first value will be returned first.
-      }
-      else if(number == 1) {
-        number++
-      //This will repeat the loop without pushing anything.
-      }
-      else {
-        result.push(currentElement)
-      }
-
   }
-  
-  return result.join("")
+  const result = list.join("")
+  return result
 }
+
 
 export function aufgabe27 (args) {
   const input = args
