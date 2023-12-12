@@ -453,12 +453,6 @@ export function aufgabe23 (args) {
   result.push(firstElement)
   return result.join("")
 }
- 
-
-//Unless I translated it wrong, I believe this code does what it's supposed to do.
-//However, there is still a red message when checking on the website.
-//It says "aa" should be equal to "aaa"
-//However, if you double the first input and then add it to the end, "aa" should turn into "aaaa"
 
 
 export function aufgabe24 (args) {
