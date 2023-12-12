@@ -307,24 +307,35 @@ return result.join("")
 
 export function aufgabe17 (args) {
   const input = args
-  const result = []
+  const listFirst = []
+  const listSecond = []
+  const listThird = []
+  let switch1 = true
+  let switch2 = true
   let count = 0
-  
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (count === 3) {
+    if (currentElement === "," && i + 2 > input.length) {
 
-  } else if (currentElement === "," && i !== input.length) {
-  result.push(",")
-  result.push(" ")
-  count++
+    } else if (currentElement === "." && count === 0) {
+      switch1 = false
+      count++
+    } else if (currentElement === "." && count === 1) {
+      switch2 = false
+      count++
+      }
+     else {
+      if (switch1 === true) {
+        listFirst.push(currentElement)
+      } else if (switch2 === true)
+        listSecond.push(currentElement)
+      else {
+        listThird.push(currentElement)
+      }
+    }
   }
-  else {
-    result.push(currentElement)
-  }
- 
-}
-return result.join("")
+  const result = listFirst.join("") + listSecond.join("") + listThird.join("")
+  return result
 }
 
 export function aufgabe18 (args) {
@@ -430,33 +441,20 @@ export function aufgabe22 (args) {
   }
   return result.join("")
 }
-
 export function aufgabe23 (args) {
   const input = args
   const result = []
-  let count = 0
-
+  const firstElement = input[0]
+  result.push(firstElement)
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const currentElement1 = input[0]
-    
-    if (count === 0) {
-      count++
-      result.push(currentElement)
-      result.push(currentElement)
-      //This doubles the first input.
-    } else if (i+2 > input.length) { 
-      result.push(currentElement)
-      result.push(currentElement1)
-      //This will return the last input as normal and then add the first input to the end.
-    }
-    else {
-      result.push(currentElement)
-    }
-
+    result.push(currentElement)
   }
+  result.push(firstElement)
   return result.join("")
 }
+ 
+
 //Unless I translated it wrong, I believe this code does what it's supposed to do.
 //However, there is still a red message when checking on the website.
 //It says "aa" should be equal to "aaa"
