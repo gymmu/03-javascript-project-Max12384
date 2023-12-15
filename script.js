@@ -609,7 +609,7 @@ export function aufgabe28 (args) {
 
     if (currentElement === " "){
     count3++ 
-    //once a space is read, count3 will increase by 1
+    //once a space is read, count3 will increase by 1. This is used to seperate the two inputs
     } else if (count3 === 1) {
       result1.push(currentElement)
     } else {
@@ -621,5 +621,4 @@ export function aufgabe28 (args) {
   let add2 = parseInt(result1.join(""))
   let final = add1 + add2
   return final
-  //almost finished, but I do not know how to add the two results.
 }
